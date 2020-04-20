@@ -8,6 +8,54 @@
 <body>
     <script>
 
+    //function findRepeat(nums,k,t){
+        // let temp = [0]
+        // for(let i =1;i<nums.length;i++){
+        //     let p = nums[i]
+        //     for(let j = 0;j<temp.length;j++){
+        //         let q = temp[j]
+        //         let a = nums[q]
+        //         let k = Math.abs(a-p)
+        //         let l = Math.abs(q-i)
+        //         if(k<=t &&  l<=k) return true
+        //     }
+        //     temp.push(i)
+        // }
+        // return false
+
+        // function findRepeat(nums,k){
+        //     let s = new Set()
+        //     for(let i = 0;i<nums.length;i++){
+        //         if(s.includes(nums[i])) return true
+        //         s.add(nums[i])
+        //         if(s.size()>k){
+        //            s.delete(nums[i-k])
+        //         }
+        //     }
+        //     return false
+
+        // }
+        function yuan(prev,next){
+            this.prev = prev
+            this.next = next
+        }
+        function win(arr){
+            //dp(i,j) 获得最多的石头的个数
+            //在i,j范围内选择值
+            let n = arr.length
+            let dp = Array.from(new Array(n),()=>new Array(n))
+            for(let i =0;i<n;i++){
+                dp[i][i] = new yuan(arr[i],0)
+            }
+            console.log(dp)
+            for(let i = 0;i<arr.length;i++){
+                for(let j =i+1;j<)
+            }
+            
+        }
+        win([1,3,2,5])
+
+   // }
  
     </script>
 </body>
