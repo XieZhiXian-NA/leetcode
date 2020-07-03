@@ -161,8 +161,17 @@ class promise{
          }
      })
     }
+    race(promises){
+        return new Promise((resolve, reject) => {
+            for (var i = 0; i < promises.length; i++) {
+                promises[i].then(resolve,reject)
+            }
+        })
+    }
 }
 //catch之后还可以then
 Promise.prototype.catch = function(onRejected){
     return this.then(null,onRejected)
 }
+
+

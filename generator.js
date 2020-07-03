@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-
 let promisefy = (fn)=>(...args)=>new Promise((resolve,reject)=>{
-    console.log('fhwifwehf')
     try {
         let data = fn(...args)
-        
+        console.log('fhwifwehf')
          resolve(data)
     } catch (error) {
         reject(error)
@@ -37,7 +26,6 @@ function co(it){
     return new Promise((resolve,reject)=>{
         function next(data){
             let {value,done} = it.next(data)
-            console.log('jefwjfwio')
             if(!done){
                 value.then(data=>{
                     next(data)
@@ -51,6 +39,5 @@ co(gen()).then(data=>{
     console.log('gen',data)
 })
  
-    </script>
-</body>
-</html>
+// async await
+// await 是primise.then()语法糖
